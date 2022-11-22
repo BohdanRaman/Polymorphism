@@ -13,7 +13,12 @@ public class Cycle {
         System.out.println("Basic class Cycle");
     }
 
+    public int ride(int i ){
+        return wheels(i);
+    }
+
     public int wheels(int c){
+        System.out.println("count of wheels: ");
         return c;
     }
 }
