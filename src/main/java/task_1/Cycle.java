@@ -1,4 +1,4 @@
-package cycle_class_task1;
+package task_1;
 
 /**
  * Create a Cycle class, with subclasses Unicycle, Bicycle and Tricycle.
