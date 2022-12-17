@@ -6,12 +6,10 @@ import task_1.Tricycle;
 import task_1.Unicycle;
 import task_10.FirstClass;
 import task_10.SecondClass;
-import task_12.Gerbil;
-import task_12.Hamster;
-import task_12.Mouse;
-import task_12.Rodent;
-
-import java.awt.*;
+import task_9_12_14.Gerbil;
+import task_9_12_14.Hamster;
+import task_9_12_14.Mouse;
+import task_9_12_14.Rodent;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,27 +37,31 @@ public class Main {
         fClass.numberOneMethod();
         System.out.println();
 
-        /*task 12*/
-        System.out.println("Task 12: ");
-        Rodent rodent = new Rodent();
-        Rodent mouse = new Mouse();
-        Rodent gerbil = new Gerbil();
-        Rodent hamster = new Hamster();
-        System.out.println(rodent.say("pi pi pi"));
-        System.out.println("rodent eat: " + rodent.eat(1) + " gram");
-        System.out.println("rodent jump: " + rodent.jump(1) + " cm");
+        /*task 9, 12, 14 */
+        System.out.println("Task 9, 12, 14: ");
+        /* realization task 9*/
+        Rodent[] rodents = new Rodent[3];
+        rodents[0] = new Mouse();
+        rodents[1] = new Gerbil();
+        rodents[2] = new Hamster();
+        for (Rodent r : rodents) {
+            System.out.println(r);
+            System.out.println();
+        }
 
-        System.out.println(mouse.say("mi mi mi"));
-        System.out.println("mouse eat: " + mouse.eat(2) + " gram");
-        System.out.println("mouse jump" + mouse.jump(2) + " cm");
+        /* realization task 12*/
+        Rodent[] rodents1 = new Rodent[3];
+        rodents1[0] = new Mouse(1, "Mikky Mouse");
+        rodents1[1] = new Gerbil(2, "mini Mouse gerbil");
+        rodents1[2] = new Hamster(3, " Hamster Pip");
+        for (Rodent rrr : rodents1) {
+            System.out.println("Age rodent: " + rrr.getAge() + "; name rodent: " + rrr.getName());
+            System.out.println();
+        }
 
-        System.out.println(gerbil.say("po p po"));
-        System.out.println("gerbil jump: " + gerbil.jump(3) + " cm");
-        System.out.println("gerbil eat: " + gerbil.eat(3) + " gram");
-
-        System.out.println(hamster.say("yui yiu"));
-        System.out.println("hamster eat: " + hamster.eat(4) + " gram");
-        System.out.println("hamster jump: " + hamster.jump(4) + " cm");
+        Hamster hamster = new Hamster();
+        System.out.println(hamster);
+        System.out.println();
 
     }
 }
