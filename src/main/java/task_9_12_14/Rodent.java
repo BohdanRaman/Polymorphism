@@ -1,7 +1,7 @@
 package task_9_12_14;
 
 /**
- * Exercise 12: Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster,
+ * Exercise 9: Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster,
  * etc. In the base class, provide methods that are common to all Rodents, and override these
  * in the derived classes to perform different behaviors depending on the specific type of
  * Rodent. Create an array of Rodent, fill it with different specific types of Rodents, and call
