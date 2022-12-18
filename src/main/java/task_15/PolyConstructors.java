@@ -1,5 +1,6 @@
 package task_15;
- class Glyph {
+
+class Glyph {
     void draw() {
         System.out.println(("Glyph.draw()"));
     }
@@ -24,8 +25,24 @@ class RoundGlyph extends Glyph {
     }
 }
 
-public class PolyConstructors {
+class RectangularGlyph {
+    public RectangularGlyph() {
+        System.out.println("RectangularGlyph(), new (before) finalDraw");
+        finalDraw();
+        System.out.println("RectangularGlyph(), new (after) finalDraw");
+    }
+
+    final void finalDraw() {
+        int i = 100;
+        System.out.println("Glyph.finalDraw()" + i);
+    }
+}
+
+public class PolyConstructors extends RectangularGlyph {
+
     public static void main(String[] args) {
         new RoundGlyph(5);
+        System.out.println("----------------------------------------------");
+        new RectangularGlyph();
     }
 }

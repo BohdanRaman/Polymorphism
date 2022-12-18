@@ -1,9 +1,9 @@
 package main;
 
-import task_1.Bicycle;
-import task_1.Cycle;
-import task_1.Tricycle;
-import task_1.Unicycle;
+import task_1_17.Bicycle;
+import task_1_17.Cycle;
+import task_1_17.Tricycle;
+import task_1_17.Unicycle;
 import task_10.FirstClass;
 import task_10.SecondClass;
 import task_9_12_14.Gerbil;
@@ -30,6 +30,17 @@ public class Main {
         System.out.println(unicycle.ride(2));
         System.out.println(bicycle.ride(3));
         System.out.println(tricycle.ride(4) + "\n");
+
+        Cycle[] arrayCycle = new Cycle[3];
+        arrayCycle[0] = new Bicycle();
+        arrayCycle[1] = new Tricycle();
+        arrayCycle[2] = new Unicycle();
+        /* I can't call method balance(), because it didn't create in base class*/
+
+        ((Bicycle) arrayCycle[0]).balance();
+        ((Unicycle) arrayCycle[2]).balance();
+        //  ((Tricycle) arrayCycle[2]).balance(); Error, I should to create balance method in class Tricycle.
+        System.out.println();
 
         /*task 10*/
         System.out.println("Task 10: ");
