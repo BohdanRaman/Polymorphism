@@ -1,4 +1,4 @@
-package task_9_12_14;
+package task_9_12;
 
 public class Hamster extends Gerbil {
     Rodent rodent = new Rodent();
@@ -11,6 +11,18 @@ public class Hamster extends Gerbil {
     public Hamster() {
         System.out.println("class Hamster is initialization fourth");
     }
+
+    private Gerbil gerbil1;
+    private static long counter = 0;
+    private final long id = counter++;
+
+    public Hamster(Gerbil gerbil) {
+        System.out.println(("Creating "));
+        this.gerbil1 = gerbil;
+        this.gerbil1.addRef();
+    }
+
+    public String toString1() { return "Hamster " + id; }
 
     @Override
     public String say(String voice) {

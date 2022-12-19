@@ -1,6 +1,18 @@
-package task_9_12_14;
+package task_9_12;
+
+import task_14.NewRodent;
 
 public class Gerbil extends Mouse {
+    private Mouse mouse;
+    private static long counter = 0;
+    private final long id = counter++;
+
+    public Gerbil(Mouse mouse) {
+        System.out.println(("Creating "));
+        this.mouse = mouse;
+        this.mouse.addRef();
+    }
+    public String toString1() { return "Gerbil " + id; }
     public Gerbil(int age, String name) {
         super(age, name);
     }
@@ -8,8 +20,6 @@ public class Gerbil extends Mouse {
     public Gerbil() {
         System.out.println("class Gerbil is initialization third");
     }
-
-
 
     @Override
     public String say(String voice) {

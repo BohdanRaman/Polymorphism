@@ -1,15 +1,19 @@
 package main;
 
+import task_14.NewGerbil;
+import task_14.NewHamster;
+import task_14.NewMouse;
+import task_14.NewRodent;
 import task_1_17.Bicycle;
 import task_1_17.Cycle;
 import task_1_17.Tricycle;
 import task_1_17.Unicycle;
 import task_10.FirstClass;
 import task_10.SecondClass;
-import task_9_12_14.Gerbil;
-import task_9_12_14.Hamster;
-import task_9_12_14.Mouse;
-import task_9_12_14.Rodent;
+import task_9_12.Gerbil;
+import task_9_12.Hamster;
+import task_9_12.Mouse;
+import task_9_12.Rodent;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,8 +52,8 @@ public class Main {
         fClass.numberOneMethod();
         System.out.println();
 
-        /*task 9, 12, 14 */
-        System.out.println("Task 9, 12, 14: ");
+        /*task 9, 12 */
+        System.out.println("Task 9, 12: ");
         /* realization task 9*/
         Rodent[] rodents = new Rodent[3];
         rodents[0] = new Mouse();
@@ -57,8 +61,8 @@ public class Main {
         rodents[2] = new Hamster();
         for (Rodent r : rodents) {
             System.out.println(r);
-            System.out.println();
         }
+        System.out.println("---------------------------------------------");
 
         /* realization task 12*/
         Rodent[] rodents1 = new Rodent[3];
@@ -67,12 +71,21 @@ public class Main {
         rodents1[2] = new Hamster(3, " Hamster Pip");
         for (Rodent rrr : rodents1) {
             System.out.println("Age rodent: " + rrr.getAge() + "; name rodent: " + rrr.getName());
-            System.out.println();
         }
+        System.out.println("---------------------------------------------");
 
         Hamster hamster = new Hamster();
         System.out.println(hamster);
         System.out.println();
+
+        /* realization task 14*/
+        System.out.println("Task 14: ");
+        Rodent rodent = new Rodent();
+        Rodent[] r = { new Mouse(rodent), new Gerbil(), new Hamster()};
+        for (Rodent rrr : r) {
+            System.out.println(rrr);
+        }
+
 
     }
 }

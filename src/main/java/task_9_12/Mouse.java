@@ -1,6 +1,15 @@
-package task_9_12_14;
+package task_9_12;
 
 public class Mouse extends Rodent {
+    private Rodent rodent;
+    private static long counter = 0;
+    private final long id = counter++;
+    public String toString1() { return "Mouse " + id; }
+    public Mouse(Rodent rodent) {
+        this.rodent = rodent;
+        this.rodent.addRef();
+    }
+
     public Mouse(int age, String name) {
         super(age, name);
     }
