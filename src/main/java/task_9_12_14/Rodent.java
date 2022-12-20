@@ -1,4 +1,4 @@
-package task_14;
+package task_9_12_14;
 
 /**
  * Exercise 9: Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster,
@@ -15,25 +15,58 @@ package task_14;
  * with reference counting, and demonstrate that it works properly.
  */
 
-public class NewRodent {
-
+public class Rodent {
+    private int age;
+    private String name;
     private int refcount = 0;
     private static long counter = 0;
     private final long id = counter++;
 
-    public NewRodent() {
+    public Rodent(Rodent rodent) {
     }
 
     public void addRef() {
         refcount++;
     }
 
-    public String toString() {
-        return "Shared " + id;
+    public String toString() { return "Rodent " + id; }
+
+    public int getAge() {
+        return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-   public void chooseColor(){
+    public String getName() {
+        return name;
+    }
 
-   }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Rodent(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public Rodent() {
+        System.out.println("class Rodent is initialization first");
+    }
+
+    public String say(String voice) {
+        System.out.println("Rodent say: ");
+        return voice;
+    }
+
+    public int jump(int cm) {
+        return cm;
+    }
+
+    public int eat(int gram) {
+        return gram;
+    }
+
 }

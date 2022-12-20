@@ -1,4 +1,4 @@
-package task_9_12;
+package task_9_12_14;
 
 public class Hamster extends Gerbil {
     Rodent rodent = new Rodent();

@@ -1,19 +1,15 @@
 package main;
 
-import task_14.NewGerbil;
-import task_14.NewHamster;
-import task_14.NewMouse;
-import task_14.NewRodent;
 import task_1_17.Bicycle;
 import task_1_17.Cycle;
 import task_1_17.Tricycle;
 import task_1_17.Unicycle;
 import task_10.FirstClass;
 import task_10.SecondClass;
-import task_9_12.Gerbil;
-import task_9_12.Hamster;
-import task_9_12.Mouse;
-import task_9_12.Rodent;
+import task_9_12_14.Gerbil;
+import task_9_12_14.Hamster;
+import task_9_12_14.Mouse;
+import task_9_12_14.Rodent;
 
 public class Main {
     public static void main(String[] args) {
