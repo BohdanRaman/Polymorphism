@@ -48,9 +48,9 @@ public class Main {
         fClass.numberOneMethod();
         System.out.println();
 
-        /*task 9, 12 */
-        System.out.println("Task 9, 12: ");
-        /* realization task 9*/
+        /*task 9, 12, 14 */
+        System.out.println("Task 9, 12, 14: ");
+        System.out.println("realization task 9: ");
         Rodent[] rodents = new Rodent[3];
         rodents[0] = new Mouse();
         rodents[1] = new Gerbil();
@@ -58,9 +58,8 @@ public class Main {
         for (Rodent r : rodents) {
             System.out.println(r);
         }
-        System.out.println("---------------------------------------------");
-
-        /* realization task 12*/
+        System.out.println();
+        System.out.println("realization task 12: ");
         Rodent[] rodents1 = new Rodent[3];
         rodents1[0] = new Mouse(1, "Mikky Mouse");
         rodents1[1] = new Gerbil(2, "mini Mouse gerbil");
@@ -75,13 +74,13 @@ public class Main {
         System.out.println();
 
         /* realization task 14*/
-        System.out.println("Task 14: ");
+        System.out.println("realization task 14: ");
+
         Rodent rodent = new Rodent();
         Rodent[] r = {new Rodent(), new Mouse(rodent), new Gerbil(), new Hamster()};
         for (Rodent rrr : r) {
+            System.out.println();
             System.out.println(rrr.toString1());
         }
-
-
     }
 }
