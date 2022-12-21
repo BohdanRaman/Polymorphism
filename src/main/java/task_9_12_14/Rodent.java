@@ -18,17 +18,17 @@ package task_9_12_14;
 public class Rodent {
     private int age;
     private String name;
-    private int refcount = 0;
+    private int refCount = 0;
     private static long counter = 0;
     private final long id = counter++;
 
 
     public void addRef() {
-        refcount++;
+        refCount++;
     }
 
     public String toString1() {
-        return "Rodent refcount: " + id;
+        return "Rodent refCount: " + id;
     }
 
     public int getAge() {

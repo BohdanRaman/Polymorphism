@@ -12,7 +12,7 @@ public class Gerbil extends Mouse {
         this.mouse = mouse;
         this.mouse.addRef();
     }
-    public String toString1() { return "Gerbil refcount: " + id; }
+    public String toString1() { return "Gerbil refCount: " + id; }
 
     public Gerbil(int age, String name) {
         super(age, name);

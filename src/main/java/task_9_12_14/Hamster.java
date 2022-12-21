@@ -22,7 +22,7 @@ public class Hamster extends Gerbil {
         this.gerbil1.addRef();
     }
 
-    public String toString1() { return "Hamster refcount: " + id; }
+    public String toString1() { return "Hamster refCount: " + id; }
 
     @Override
     public String say(String voice) {

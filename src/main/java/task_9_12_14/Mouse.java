@@ -6,7 +6,7 @@ public class Mouse extends Rodent {
     private final long id = counter++;
 
     public String toString1() {
-        return "Mouse refcount: " + id;
+        return "Mouse refCount: " + id;
     }
 
     public Mouse(Rodent rodent) {
