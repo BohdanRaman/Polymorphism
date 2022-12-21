@@ -8,11 +8,12 @@ public class Gerbil extends Mouse {
     private final long id = counter++;
 
     public Gerbil(Mouse mouse) {
-        System.out.println(("Creating "));
+        System.out.println(("Creating gerbil" + this));
         this.mouse = mouse;
         this.mouse.addRef();
     }
-    public String toString1() { return "Gerbil " + id; }
+    public String toString1() { return "Gerbil refcount: " + id; }
+
     public Gerbil(int age, String name) {
         super(age, name);
     }

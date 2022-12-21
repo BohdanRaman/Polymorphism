@@ -77,9 +77,9 @@ public class Main {
         /* realization task 14*/
         System.out.println("Task 14: ");
         Rodent rodent = new Rodent();
-        Rodent[] r = { new Mouse(rodent), new Gerbil(), new Hamster()};
+        Rodent[] r = {new Rodent(), new Mouse(rodent), new Gerbil(), new Hamster()};
         for (Rodent rrr : r) {
-            System.out.println(rrr);
+            System.out.println(rrr.toString1());
         }
 
 

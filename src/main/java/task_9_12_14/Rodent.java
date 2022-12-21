@@ -22,14 +22,14 @@ public class Rodent {
     private static long counter = 0;
     private final long id = counter++;
 
-    public Rodent(Rodent rodent) {
-    }
 
     public void addRef() {
         refcount++;
     }
 
-    public String toString() { return "Rodent " + id; }
+    public String toString1() {
+        return "Rodent refcount: " + id;
+    }
 
     public int getAge() {
         return age;

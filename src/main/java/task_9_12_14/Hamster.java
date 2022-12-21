@@ -16,13 +16,13 @@ public class Hamster extends Gerbil {
     private static long counter = 0;
     private final long id = counter++;
 
-    public Hamster(Gerbil gerbil) {
-        System.out.println(("Creating "));
-        this.gerbil1 = gerbil;
+    public Hamster(Gerbil gerbil1) {
+        System.out.println(("Creating hamster" + this));
+        this.gerbil1 = gerbil1;
         this.gerbil1.addRef();
     }
 
-    public String toString1() { return "Hamster " + id; }
+    public String toString1() { return "Hamster refcount: " + id; }
 
     @Override
     public String say(String voice) {

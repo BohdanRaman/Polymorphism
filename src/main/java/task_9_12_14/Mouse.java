@@ -4,8 +4,13 @@ public class Mouse extends Rodent {
     private Rodent rodent;
     private static long counter = 0;
     private final long id = counter++;
-    public String toString1() { return "Mouse " + id; }
+
+    public String toString1() {
+        return "Mouse refcount: " + id;
+    }
+
     public Mouse(Rodent rodent) {
+        System.out.println(this);
         this.rodent = rodent;
         this.rodent.addRef();
     }
@@ -17,6 +22,7 @@ public class Mouse extends Rodent {
     public Mouse() {
         System.out.println("class Mouse is initialization second");
     }
+
     @Override
     public String say(String voice) {
         return voice;
@@ -35,6 +41,6 @@ public class Mouse extends Rodent {
     @Override
     public String toString() {
         return "Mouse: " + "\n" + " jump cm: " + jump(1)
-                + ", eat: " + eat(1)+ ", say: " + say("mi mi mi");
+                + ", eat: " + eat(1) + ", say: " + say("mi mi mi");
     }
 }
