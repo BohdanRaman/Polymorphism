@@ -30,17 +30,17 @@ public class Mouse extends Rodent {
 
     @Override
     public int jump(int cm) {
-        return cm;
+        return super.jump(cm);
     }
 
     @Override
-    public int eat(int gram) {
-        return gram;
+    public String eat(int gram) {
+        return super.eat(gram);
     }
 
     @Override
     public String toString() {
-        return "Mouse: " + "\n" + " jump cm: " + jump(1)
-                + ", eat: " + eat(1) + ", say: " + say("mi mi mi");
+        return "Mouse: " + "\n" + " jump cm: " + jump(6)
+                + ", eat: " + eat(65) + ", say: " + say("mi mi mi");
     }
 }
