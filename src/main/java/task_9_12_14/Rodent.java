@@ -62,11 +62,20 @@ public class Rodent {
     }
 
     public int jump(int cm) {
+        if (cm < 0) {
+            System.out.println("error");
+        }
+        if (cm > 0 && cm < 5) {
+            System.out.println("small jump");
+        }
+        if (cm >= 5) {
+            System.out.println("big jump");
+        }
         return cm;
+
     }
 
-    public int eat(int gram) {
-        return gram;
+    public String eat(int gram) {
+        return gram < 50 ? "small eat" : "taste eat";
     }
-
 }

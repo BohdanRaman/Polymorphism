@@ -1,18 +1,13 @@
 package task_9_12_14;
 
 
-
 public class Gerbil extends Mouse {
-    private Mouse mouse;
     private static long counter = 0;
     private final long id = counter++;
 
-    public Gerbil(Mouse mouse) {
-        System.out.println(("Creating gerbil" + this));
-        this.mouse = mouse;
-        this.mouse.addRef();
+    public String toString1() {
+        return "Gerbil refCount: " + id;
     }
-    public String toString1() { return "Gerbil refCount: " + id; }
 
     public Gerbil(int age, String name) {
         super(age, name);
@@ -29,12 +24,12 @@ public class Gerbil extends Mouse {
 
     @Override
     public int jump(int cm) {
-        return cm;
+        return super.jump(cm);
     }
 
     @Override
-    public int eat(int gram) {
-        return gram;
+    public String eat(int gram) {
+        return super.eat(gram);
     }
 
     @Override
