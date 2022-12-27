@@ -5,11 +5,16 @@ public class Bicycle extends Cycle {
         System.out.println("Bicycle class");
     }
 
-    public void balance(){
+    public void balance() {
         System.out.println("balance in Bicycle class");
     }
 
     public void ride() {
         System.out.println("Bicycle class");
+    }
+
+    @Override
+    public int ride(int i) {
+        return i + 10;
     }
 }
