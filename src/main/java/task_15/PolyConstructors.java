@@ -30,6 +30,7 @@ class RoundGlyph extends Glyph {
 }
 
 class RectangularGlyph extends RoundGlyph{
+
     public RectangularGlyph() {
         super(111);
 
@@ -39,7 +40,7 @@ class RectangularGlyph extends RoundGlyph{
     }
 
     final void finalDraw() {
-        int i = 100;
+            int i = 100;
         System.out.println("Glyph.finalDraw()" + i);
     }
 }

@@ -5,9 +5,9 @@ class Glyph {
         System.out.println("Glyph.draw()");             // create method
     }
 
-    public Glyph() {                                    //create constructor
+    public Glyph() {                                    //create constructor. The base-class constructor is called first.
         System.out.println("Glyph() before draw()");    //print message
-        draw();                                         //calling dynamically-bound method inside constructor
+        draw();                                         //calling dynamically-bound method inside constructor. It is not initialized.
         System.out.println("Glyph() after draw()");     //print message
     }
 }
@@ -17,7 +17,8 @@ class RoundGlyph extends Glyph {
 
     public RoundGlyph(int r) {                       //create constructor
         this.radius = r;                             //our constructor to refers on concrete the variable
-        System.out.println(("RoundGlyph.RoundGlyph(), radius = " + radius));    //print message with the variable
+        System.out.println(("RoundGlyph.RoundGlyph(), radius = " + radius));    /* print message with the variable.
+                                                                                 The body of the derived-class (RoundGlyph) constructor is called. */
     }
 
     void draw() {
@@ -32,8 +33,6 @@ public class PolyConstructors {
 }
 
 /*
-1. The base-class constructors are called first.
-2. draw( ) method in base-class constructors is not initialized, because кфвшгы
 Output:
 Glyph() before draw()
 RoundGlyph.draw(), radius = 0
