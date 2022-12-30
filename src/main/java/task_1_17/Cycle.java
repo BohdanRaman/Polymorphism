@@ -22,7 +22,7 @@ public class Cycle {
         return wheels(i);
     }
 
-    public int wheels(int c) {
+    private int wheels(int c) {
         System.out.println("count of wheels: ");
         return c;
     }

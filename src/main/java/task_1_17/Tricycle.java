@@ -8,4 +8,9 @@ public class Tricycle extends Cycle {
     public void ride() {
         System.out.println("Tricycle class");
     }
+
+    @Override
+    public int ride(int i) {
+        return i + 10;
+    }
 }

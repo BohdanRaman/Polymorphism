@@ -29,15 +29,18 @@ class RoundGlyph extends Glyph {
     }
 }
 
-class RectangularGlyph {
+class RectangularGlyph extends RoundGlyph{
+
     public RectangularGlyph() {
+        super(111);
+
         System.out.println("RectangularGlyph(), new (before) finalDraw");
         finalDraw();
         System.out.println("RectangularGlyph(), new (after) finalDraw");
     }
 
     final void finalDraw() {
-        int i = 100;
+            int i = 100;
         System.out.println("Glyph.finalDraw()" + i);
     }
 }
