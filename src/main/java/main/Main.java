@@ -26,10 +26,14 @@ public class Main {
         tricycle.ride();
         System.out.println();
 
-        System.out.println(cycle.ride(1));
-        System.out.println(unicycle.ride(2));
-        System.out.println(bicycle.ride(3));
-        System.out.println(tricycle.ride(4) + "\n");
+        cycle.setCountWheels(10);
+        unicycle.setCountWheels(1);
+        bicycle.setCountWheels(2);
+        tricycle.setCountWheels(3);
+        System.out.println(cycle.ride(1) + ", " + cycle.getCountWheels());
+        System.out.println(unicycle.ride(2)+ ", " + unicycle.getCountWheels());
+        System.out.println(bicycle.ride(3)+ ", " + bicycle.getCountWheels());
+        System.out.println(tricycle.ride(4) + ", " + tricycle.getCountWheels()+ "\n");
 
         Cycle[] arrayCycle = new Cycle[3];
         arrayCycle[0] = new Bicycle();

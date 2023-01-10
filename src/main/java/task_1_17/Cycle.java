@@ -15,8 +15,16 @@ package task_1_17;
 public class Cycle {
     private int countWheels;
 
+    public int getCountWheels() {
+        return countWheels;
+    }
+
+    public void setCountWheels(int countWheels) {
+        this.countWheels = countWheels;
+    }
+
     public void ride() {
-        System.out.println("Basic class Cycle");
+        System.out.println("Basic class Cycle, method ride()");
     }
 
     public int ride(int i) {

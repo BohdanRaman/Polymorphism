@@ -10,7 +10,7 @@ public class Unicycle extends Cycle {
     }
 
     public void ride() {
-        System.out.println("Unicycle class");
+        System.out.println("Unicycle class, method ride()");
     }
 
     @Override
