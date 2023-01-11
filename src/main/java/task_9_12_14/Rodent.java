@@ -18,11 +18,18 @@ package task_9_12_14;
 public class Rodent {
     private int age;
     private String name;
-    private static long counter = 1;
+    private static long counter = 0;
     private final long id = counter++;
-    /** T */
 
-    public String showCount() {
+    /** Counter:
+     * The method  'showRefCount' show reference amount in our a class.
+     * The static variable belong a class. So I should in each a class write static variable 'counter'.
+     * I write final  'counter++' because this variable value will not change.
+     * If I don't write fields 'counter' and 'counter++' and don't use overridden method 'showRefCount',
+     * then to previous 'refCount' added just unit.
+     */
+
+    public String showRefCount() {
         return "Rodent refCount: " + id;
     }
 

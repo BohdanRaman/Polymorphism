@@ -16,7 +16,7 @@ public class Hamster extends Gerbil {
     }
 
     @Override
-    public String showCount() {
+    public String showRefCount() {
         return "Hamster refCount: " + id;
     }
 

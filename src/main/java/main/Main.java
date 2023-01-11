@@ -83,7 +83,7 @@ public class Main {
         Rodent[] rod = {new Rodent(), new Mouse(), new Gerbil(), new Hamster()};
         for (Rodent variableRodent : rod) {
             System.out.println();
-            System.out.println(variableRodent.showCount());
+            System.out.println(variableRodent.showRefCount());
         }
     }
 }

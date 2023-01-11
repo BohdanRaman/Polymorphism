@@ -1,7 +1,6 @@
 package task_9_12_14;
 
 public class Mouse extends Rodent {
-
     private static long counter = 0;
     private final long id = counter++;
     private int mouseJump = 6;
@@ -9,7 +8,7 @@ public class Mouse extends Rodent {
     private String mouseSay = "mi mi mi";
 
     @Override
-    public String showCount() {
+    public String showRefCount() {
         return "Mouse refCount: " + id;
     }
 

@@ -10,7 +10,7 @@ public class Gerbil extends Mouse {
 
 
     @Override
-    public String showCount() {
+    public String showRefCount() {
         return "Gerbil refCount: " + id;
     }
 
