@@ -1,18 +1,15 @@
 package task_9_12_14;
 
 public class Mouse extends Rodent {
-    private Rodent rodent;
     private static long counter = 0;
     private final long id = counter++;
+    private int mouseJump = 6;
+    private int mouseEat = 65;
+    private String mouseSay = "mi mi mi";
 
-    public String toString1() {
+    @Override
+    public String showRefCount() {
         return "Mouse refCount: " + id;
-    }
-
-    public Mouse(Rodent rodent) {
-        System.out.println(this);
-        this.rodent = rodent;
-        this.rodent.addRef();
     }
 
     public Mouse(int age, String name) {
@@ -24,23 +21,9 @@ public class Mouse extends Rodent {
     }
 
     @Override
-    public String say(String voice) {
-        return voice;
-    }
-
-    @Override
-    public int jump(int cm) {
-        return super.jump(cm);
-    }
-
-    @Override
-    public String eat(int gram) {
-        return super.eat(gram);
-    }
-
-    @Override
     public String toString() {
-        return "Mouse: " + "\n" + " jump cm: " + jump(6)
-                + ", eat: " + eat(65) + ", say: " + say("mi mi mi");
+        return "Mouse: " + "\n" + "jump cm: " + jump(mouseJump)
+                + ", eat: " + eat(mouseEat) + ", say: " + say(mouseSay)
+                + "\n" + "Class Mouse used methods from Rodent base class";
     }
 }

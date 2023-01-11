@@ -18,16 +18,18 @@ package task_9_12_14;
 public class Rodent {
     private int age;
     private String name;
-    private int refCount = 0;
     private static long counter = 0;
     private final long id = counter++;
 
+    /** Counter:
+     * The method  'showRefCount' show reference amount in our a class.
+     * The static variable belong a class. So I should in each a class write static variable 'counter'.
+     * I write final  'counter++' because this variable value will not change.
+     * If I don't write fields 'counter' and 'counter++' and don't use overridden method 'showRefCount',
+     * then to previous 'refCount' added just unit.
+     */
 
-    public void addRef() {
-        refCount++;
-    }
-
-    public String toString1() {
+    public String showRefCount() {
         return "Rodent refCount: " + id;
     }
 
@@ -63,19 +65,18 @@ public class Rodent {
 
     public int jump(int cm) {
         if (cm < 0) {
-            System.out.println("error");
+            System.out.println("Rodent can't so jump");
         }
         if (cm > 0 && cm < 5) {
-            System.out.println("small jump");
+            System.out.println("Rodent has a small jump");
         }
         if (cm >= 5) {
-            System.out.println("big jump");
+            System.out.println("Rodent has a big jump");
         }
         return cm;
-
     }
 
     public String eat(int gram) {
-        return gram < 50 ? "small eat" : "taste eat";
+        return gram < 50 ? "Rodent eats little" : "Rodent eats a lot";
     }
 }

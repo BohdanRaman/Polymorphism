@@ -13,17 +13,26 @@ package task_1_17;
  * the results. Downcast and call balance( ) and observe what happens.
  */
 public class Cycle {
+    private int countWheels;
+
+    public int getCountWheels() {
+        return countWheels;
+    }
+
+    public void setCountWheels(int countWheels) {
+        this.countWheels = countWheels;
+    }
 
     public void ride() {
-        System.out.println("Basic class Cycle");
+        System.out.println("Basic class Cycle, method ride()");
     }
 
     public int ride(int i) {
-        return wheels(i);
+        return wheels();
     }
 
-    private int wheels(int c) {
-        System.out.println("count of wheels: ");
-        return c;
+    private int wheels() {
+        System.out.println("count of wheels: " + countWheels);
+        return countWheels;
     }
 }

@@ -1,6 +1,11 @@
 package task_9_12_14;
 
 public class Hamster extends Gerbil {
+    private static long counter = 0;
+    private final long id = counter++;
+    private int hamsterJump = 3;
+    private int hamsterEat = 16;
+    private String hamsterSay = "yui yiu";
 
     public Hamster(int age, String name) {
         super(age, name);
@@ -10,31 +15,15 @@ public class Hamster extends Gerbil {
         System.out.println("class Hamster is initialization fourth");
     }
 
-    private static long counter = 0;
-    private final long id = counter++;
-
-    public String toString1() {
+    @Override
+    public String showRefCount() {
         return "Hamster refCount: " + id;
     }
 
     @Override
-    public String say(String voice) {
-        return voice;
-    }
-
-    @Override
-    public int jump(int cm) {
-        return super.jump(cm);
-    }
-
-    @Override
-    public String eat(int gram) {
-        return super.eat(gram);
-    }
-
-    @Override
     public String toString() {
-        return "Hamster: " + "\n" + " jump cm: " + jump(3)
-                + ", eat: " + eat(16) + ", say: " + say("yui yiu");
+        return "Hamster: " + "\n" + "jump cm: " + jump(hamsterJump)
+                + ", eat: " + eat(hamsterEat) + ", say: " + say(hamsterSay)
+                + "\n" + "Class Hamster used methods from Rodent base class";
     }
 }

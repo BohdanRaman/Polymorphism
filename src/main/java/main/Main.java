@@ -26,10 +26,14 @@ public class Main {
         tricycle.ride();
         System.out.println();
 
-        System.out.println(cycle.ride(1));
-        System.out.println(unicycle.ride(2));
-        System.out.println(bicycle.ride(3));
-        System.out.println(tricycle.ride(4) + "\n");
+        cycle.setCountWheels(10);
+        unicycle.setCountWheels(1);
+        bicycle.setCountWheels(2);
+        tricycle.setCountWheels(3);
+        System.out.println(cycle.ride(1) + ", " + cycle.getCountWheels());
+        System.out.println(unicycle.ride(2) + ", " + unicycle.getCountWheels());
+        System.out.println(bicycle.ride(3) + ", " + bicycle.getCountWheels());
+        System.out.println(tricycle.ride(4) + ", " + tricycle.getCountWheels() + "\n");
 
         Cycle[] arrayCycle = new Cycle[3];
         arrayCycle[0] = new Bicycle();
@@ -55,17 +59,18 @@ public class Main {
         rodents[0] = new Mouse();
         rodents[1] = new Gerbil();
         rodents[2] = new Hamster();
-        for (Rodent r : rodents) {
-            System.out.println(r);
+        for (Rodent variableRodent : rodents) {
+            System.out.println(variableRodent);
         }
         System.out.println();
+
         System.out.println("realization task 12: ");
         Rodent[] rodents1 = new Rodent[3];
         rodents1[0] = new Mouse(1, "Mikky Mouse");
         rodents1[1] = new Gerbil(2, "mini Mouse gerbil");
         rodents1[2] = new Hamster(3, " Hamster Pip");
-        for (Rodent rrr : rodents1) {
-            System.out.println("Age rodent: " + rrr.getAge() + "; name rodent: " + rrr.getName());
+        for (Rodent variableRodent : rodents1) {
+            System.out.println("Age rodent: " + variableRodent.getAge() + "; name rodent: " + variableRodent.getName());
         }
         System.out.println("---------------------------------------------");
 
@@ -75,12 +80,10 @@ public class Main {
 
         /* realization task 14*/
         System.out.println("realization task 14: ");
-
-        Rodent rodent = new Rodent();
-        Rodent[] r = {new Rodent(), new Mouse(rodent), new Gerbil(), new Hamster()};
-        for (Rodent rrr : r) {
+        Rodent[] rod = {new Rodent(), new Mouse(), new Gerbil(), new Hamster()};
+        for (Rodent variableRodent : rod) {
             System.out.println();
-            System.out.println(rrr.toString1());
+            System.out.println(variableRodent.showRefCount());
         }
     }
 }
