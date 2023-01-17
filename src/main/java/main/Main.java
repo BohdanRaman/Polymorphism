@@ -49,7 +49,7 @@ public class Main {
         /*task 10*/
         System.out.println("Task 10: ");
         FirstClass fClass = new SecondClass();
-        fClass.numberOneMethod();
+        fClass.firstMethod();
         System.out.println();
 
         /*task 9, 12, 14 */
@@ -60,7 +60,7 @@ public class Main {
         rodents[1] = new Gerbil();
         rodents[2] = new Hamster();
         for (Rodent variableRodent : rodents) {
-            System.out.println(variableRodent);
+            System.out.println(variableRodent + "\n" );
         }
         System.out.println();
 

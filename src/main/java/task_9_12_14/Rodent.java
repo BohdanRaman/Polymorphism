@@ -18,20 +18,17 @@ package task_9_12_14;
 public class Rodent {
     private int age;
     private String name;
-    private static long counter = 0;
+    private static long counter = 1;
     private final long id = counter++;
 
-    /** Counter:
+    /**
+     * Counter:
      * The method  'showRefCount' show reference amount in our a class.
      * The static variable belong a class. So I should in each a class write static variable 'counter'.
      * I write final  'counter++' because this variable value will not change.
      * If I don't write fields 'counter' and 'counter++' and don't use overridden method 'showRefCount',
      * then to previous 'refCount' added just unit.
      */
-
-    public String showRefCount() {
-        return "Rodent refCount: " + id;
-    }
 
     public int getAge() {
         return age;
@@ -58,25 +55,34 @@ public class Rodent {
         System.out.println("class Rodent is initialization first");
     }
 
+
+    public String showRefCount() {
+        return "Rodent refCount: " + id;
+    }
+
     public String say(String voice) {
-        System.out.println("Rodent say: ");
+        System.out.println("Rodent can: ");
         return voice;
     }
 
-    public int jump(int cm) {
-        if (cm < 0) {
-            System.out.println("Rodent can't so jump");
-        }
-        if (cm > 0 && cm < 5) {
-            System.out.println("Rodent has a small jump");
-        }
-        if (cm >= 5) {
-            System.out.println("Rodent has a big jump");
-        }
-        return cm;
+    public String eat(int gram) {
+        return gram < 50 ? " Eats little" : "Eats a lot";
     }
 
-    public String eat(int gram) {
-        return gram < 50 ? "Rodent eats little" : "Rodent eats a lot";
+    public int jump(int cm) {
+        return getJump(cm);
+    }
+
+    public int getJump(int rodentJump) {
+        if (rodentJump < 0) {
+            System.out.println("Rodent can't so jump");
+        }
+        if (rodentJump > 0 && rodentJump < 5) {
+            System.out.println("Rodent has a small jump");
+        }
+        if (rodentJump >= 5) {
+            System.out.println("Rodent has a big jump");
+        }
+        return rodentJump;
     }
 }

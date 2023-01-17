@@ -3,9 +3,9 @@ package task_9_12_14;
 public class Mouse extends Rodent {
     private static long counter = 0;
     private final long id = counter++;
-    private int mouseJump = 6;
-    private int mouseEat = 65;
-    private String mouseSay = "mi mi mi";
+    private final int mouseJump = 6;
+    private final int mouseEat = 65;
+    private final String mouseSay = "mi mi mi";
 
     @Override
     public String showRefCount() {
@@ -22,8 +22,10 @@ public class Mouse extends Rodent {
 
     @Override
     public String toString() {
-        return "Mouse: " + "\n" + "jump cm: " + jump(mouseJump)
-                + ", eat: " + eat(mouseEat) + ", say: " + say(mouseSay)
-                + "\n" + "Class Mouse used methods from Rodent base class";
+        return "Mouse: " + "\n"
+                + "eat: " + eat(mouseEat) + "\n"
+                + "say: " + say(mouseSay) +  "\n"
+                + "jump cm: " + jump(mouseJump) + "\n"
+                + "Class Mouse used methods from Rodent base class";
     }
 }
