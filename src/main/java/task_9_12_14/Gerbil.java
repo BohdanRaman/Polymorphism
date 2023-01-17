@@ -4,10 +4,9 @@ package task_9_12_14;
 public class Gerbil extends Mouse {
     private static long counter = 0;
     private final long id = counter++;
-    private int gerbilJump = 2;
-    private int gerbilEat = 2;
-    private String gerbilSay = "po p po";
-
+    private final int gerbilJump = 2;
+    private final int gerbilEat = 2;
+    private final String gerbilSay = "po p po";
 
     @Override
     public String showRefCount() {
@@ -24,8 +23,10 @@ public class Gerbil extends Mouse {
 
     @Override
     public String toString() {
-        return "Gerbil: " + "\n" + "jump cm: " + jump(gerbilJump)
-                + ", eat: " + eat(gerbilEat) + ", say: " + say(gerbilSay)
-                + "\n" + "Class Gerbil used methods from Rodent base class";
+        return "Gerbil: " + "\n"
+                + "eat: " + eat(gerbilEat)+ "\n"
+                + "say: " + say(gerbilSay)+ "\n"
+                + "jump cm: " + jump(gerbilJump)+ "\n"
+                + "Class Gerbil used methods from Rodent base class";
     }
 }

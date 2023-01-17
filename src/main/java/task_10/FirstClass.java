@@ -8,12 +8,12 @@ package task_10;
 
 public class FirstClass {
 
-    public void numberOneMethod() {
+    public void firstMethod() {
+        secondMethod();
         System.out.println("first method");
-        numberTwoMethod();
     }
 
-    public void numberTwoMethod() {
+    public void secondMethod() {
         System.out.println("second method");
     }
 }
