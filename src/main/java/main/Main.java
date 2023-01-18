@@ -48,9 +48,12 @@ public class Main {
 
         /*task 10*/
         System.out.println("Task 10: ");
-        FirstClass fClass = new SecondClass();
-        fClass.firstMethod();
+        FirstClass fClass = new SecondClass();  // upcast to the base type
+        fClass.firstMethod();                   // called the first method.
         System.out.println();
+        /* In result of called the first method base class and the overridden method the second class.
+        In this case (upcast), I can call only method base class.
+        I can't call a child class methods which extension this class. */
 
         /*task 9, 12, 14 */
         System.out.println("Task 9, 12, 14: ");
@@ -60,7 +63,7 @@ public class Main {
         rodents[1] = new Gerbil();
         rodents[2] = new Hamster();
         for (Rodent variableRodent : rodents) {
-            System.out.println(variableRodent + "\n" );
+            System.out.println(variableRodent + "\n");
         }
         System.out.println();
 

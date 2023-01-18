@@ -9,7 +9,7 @@ package task_10;
 public class FirstClass {
 
     public void firstMethod() {
-        secondMethod();
+        secondMethod();                     //In the first method, I call the second method
         System.out.println("first method");
     }
 
